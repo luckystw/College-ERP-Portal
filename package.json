@@ -1,0 +1,49 @@
+{
+  "name": "dpg-institute-management",
+  "version": "1.0.0",
+  "description": "DPG Institute of Technology and Management - Complete Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "init-db": "node scripts/init-db.js",
+    "setup": "npm install && npm run install-client && npm run init-db",
+    "setup-tailwind": "cd client && npm install -D tailwindcss@latest postcss@latest autoprefixer@latest && npx tailwindcss init -p",
+    "dev-full": "concurrently \"npm run dev\" \"npm run client\"",
+    "audit": "npm audit && cd client && npm audit",
+    "audit-fix": "npm audit fix && cd client && npm audit fix"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express-validator": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-mongo-sanitize": "^2.2.0",
+    "hpp": "^0.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "education",
+    "management",
+    "institute",
+    "dashboard"
+  ],
+  "author": "DPG Institute",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
